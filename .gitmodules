@@ -1,0 +1,6 @@
+[submodule "AdiSim/vendor/spdlog"]
+	path = AdiSim/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "AdiSim/vendor/GLFW"]
+	path = AdiSim/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
