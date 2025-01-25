@@ -8,14 +8,16 @@ workspace "AdiSim"
 		"Release",
 		"Dist"
 	}
-
+ 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "AdiSim/vendor/GLFW/include"
+IncludeDir["Glad"] = "AdiSim/vendor/Glad/include"
 
 include "AdiSim/vendor/GLFW"
+include "AdiSim/vendor/Glad"
 
 project "AdiSim"
 	location "AdiSim"
@@ -38,7 +40,8 @@ project "AdiSim"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 	
 	buildoptions { "/utf-8" }
@@ -46,6 +49,7 @@ project "AdiSim"
 	links 
 	{ 
 		"GLFW",
+		"Glad",	
 		"opengl32.lib"
 	}
 
@@ -57,7 +61,8 @@ project "AdiSim"
 		defines
 		{
 			"AS_PLATFORM_WINDOWS",
-			"AS_BUILD_DLL"
+			"AS_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
