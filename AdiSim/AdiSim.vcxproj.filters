@@ -1,36 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="AdiSim">
+      <UniqueIdentifier>{DCEACAA6-C88C-F57C-B147-09D19D887CCD}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="AdiSim\Events">
+      <UniqueIdentifier>{404728E0-AC07-A416-7542-ED93E1C1E8F2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AdiSim\Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="src\AdiSim.h" />
     <ClInclude Include="src\AdiSim\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>AdiSim</Filter>
     </ClInclude>
-    <ClInclude Include="src\AdiSim.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\AdiSim\Core.h">
+      <Filter>AdiSim</Filter>
     </ClInclude>
     <ClInclude Include="src\AdiSim\EntryPoint.h">
-      <Filter>Header Files</Filter>
+      <Filter>AdiSim</Filter>
     </ClInclude>
+    <ClInclude Include="src\AdiSim\Events\ApplicationEvent.h">
+      <Filter>AdiSim\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AdiSim\Events\Event.h">
+      <Filter>AdiSim\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AdiSim\Events\KeyEvent.h">
+      <Filter>AdiSim\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AdiSim\Events\MouseEvent.h">
+      <Filter>AdiSim\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AdiSim\Layer.h">
+      <Filter>AdiSim</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AdiSim\LayerStack.h">
+      <Filter>AdiSim</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AdiSim\Log.h">
+      <Filter>AdiSim</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AdiSim\Window.h">
+      <Filter>AdiSim</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\aspch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AdiSim\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>AdiSim</Filter>
     </ClCompile>
+    <ClCompile Include="src\AdiSim\Layer.cpp">
+      <Filter>AdiSim</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AdiSim\LayerStack.cpp">
+      <Filter>AdiSim</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AdiSim\Log.cpp">
+      <Filter>AdiSim</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\aspch.cpp" />
   </ItemGroup>
 </Project>
